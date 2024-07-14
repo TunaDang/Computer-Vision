@@ -22,15 +22,7 @@ class AnimalBaselineNet(nn.Module):
         super(AnimalBaselineNet, self).__init__()
         # TODO: Define layers of model architecture
         # TODO-BLOCK-BEGIN
-        self.conv1 = nn.Conv2d(3, 6, 3, 2, padding=1)
-        self.relu1 = nn.ReLU()
-        self.conv2 = nn.Conv2d(6, 12, 3, 2, padding=1)
-        self.relu2 = nn.ReLU()
-        self.conv3 = nn.Conv2d(12, 24, 3, 2, padding=1)
-        self.relu3 = nn.ReLU()
-        self.fc = nn.Linear(24 * 8 * 8, 128)
-        self.relu4 = nn.ReLU()
-        self.cls = nn.Linear(128, num_classes)
+            # REDACTED
         # TODO-BLOCK-END
 
     def forward(self, x):
@@ -38,16 +30,7 @@ class AnimalBaselineNet(nn.Module):
 
         # TODO: Define forward pass
         # TODO-BLOCK-BEGIN
-        x = self.conv1(x)
-        x = self.relu1(x)
-        x = self.conv2(x)
-        x = self.relu2(x)
-        x = self.conv3(x)
-        x = self.relu3(x)
-        x = x.view(-1, 24 * 8 * 8).float()
-        x = self.fc(x)
-        x = self.relu4(x)
-        x = self.cls(x)
+            # REDACTED
         # TODO-BLOCK-END
         return x
 
@@ -76,20 +59,12 @@ def model_train(net, inputs, labels, criterion, optimizer):
     """
     # TODO: Foward pass
     # TODO-BLOCK-BEGIN
-    model = net
-    optimizer.zero_grad()
-    outputs = model(inputs)
-    loss = criterion(outputs, labels)
-    loss.backward()
-    optimizer.step()
-    running_loss = loss.item()
+        # REDACTED
     # TODO-BLOCK-END
 
     # TODO: Backward pass
     # TODO-BLOCK-BEGIN
-    _, predicted = torch.max(outputs, 1)
-    num_correct = (predicted == labels).sum()
-    total_images = labels.size(0)
+        # REDACTED
     # TODO-BLOCK-END
 
     return running_loss, num_correct, total_images
@@ -102,32 +77,7 @@ class AnimalStudentNet(nn.Module):
         super(AnimalStudentNet, self).__init__()
         # TODO: Define layers of model architecture
         # TODO-BLOCK-BEGIN
-        self.conv1 = nn.Conv2d(3, 32, 3, 1, padding=1)
-        # Key insight: Use batch normalization, pooling, and dropout to prevent overfitting vs baseline
-        self.bn1 = nn.BatchNorm2d(32)
-        self.pool1 = nn.MaxPool2d(2, 2)
-        self.dropout1 = nn.Dropout(0.25)
-
-        self.conv2 = nn.Conv2d(32, 64, 3, 1, padding=1)
-        self.bn2 = nn.BatchNorm2d(64)
-        self.pool2 = nn.MaxPool2d(2, 2)
-        self.dropout2 = nn.Dropout(0.25)
-
-        self.conv3 = nn.Conv2d(64, 128, 3, 1, padding=1)
-        self.bn3 = nn.BatchNorm2d(128)
-        self.pool3 = nn.MaxPool2d(2, 2)
-        self.dropout3 = nn.Dropout(0.25)
-
-        self.conv4 = nn.Conv2d(128, 256, 3, 1, padding=1)
-        self.bn4 = nn.BatchNorm2d(256)
-        self.pool4 = nn.MaxPool2d(2, 2)
-        self.dropout4 = nn.Dropout(0.5)
-
-        self.fc1 = nn.Linear(256 * 4 * 4, 512)
-        self.bn5 = nn.BatchNorm1d(512)
-        self.dropout5 = nn.Dropout(0.5)
-
-        self.cls = nn.Linear(512, num_classes)
+            # REDACTED
         # TODO-BLOCK-END
 
     def forward(self, x):
@@ -135,18 +85,7 @@ class AnimalStudentNet(nn.Module):
 
         # TODO: Define forward pass
         # TODO-BLOCK-BEGIN
-        x = self.pool1(F.relu(self.bn1(self.conv1(x))))
-        x = self.dropout1(x)
-        x = self.pool2(F.relu(self.bn2(self.conv2(x))))
-        x = self.dropout2(x)
-        x = self.pool3(F.relu(self.bn3(self.conv3(x))))
-        x = self.dropout3(x)
-        x = self.pool4(F.relu(self.bn4(self.conv4(x))))
-        x = self.dropout4(x)
-        x = x.view(-1, 256 * 4 * 4)  # Flatten the tensor
-        x = F.relu(self.bn5(self.fc1(x)))
-        x = self.dropout5(x)
-        x = self.cls(x)
+                # REDACTED
         # TODO-BLOCK-END
         return x
 
@@ -178,7 +117,7 @@ def get_adversarial(img, output, label, net, criterion, epsilon):
     Hint: After the backward pass, the gradient for a parameter p of the network can be accessed using p.grad
     """
     # TODO-BLOCK-BEGIN
-
+        # REDACTED
     # TODO-BLOCK-END
 
     return perturbed_image, noise

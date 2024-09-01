@@ -1,7 +1,7 @@
 ## Exploration of convolutional neural networks (CNNs) in the context of image classification:
 
 1. Build and train a baseline model
-2. Build your own model to improve upon the baseline
+2. Combat overfitting and further improve upon the baseline
 2. Generate adversarial examples to explore potential shortcomings of CNNs
 
 Various Tensorflow/Pytorch CNN models created over the years. Optimized classification models using regularization, momentum strategies as well as classic dropout and pooling to address overfitting. For example, created a model that classified 10,000 images of Fashion MNIST and achieved >90% accuracy. 

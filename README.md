@@ -1,4 +1,4 @@
-## Exploration of convolutional neural networks (CNNs) in the context of image classification The following are your tasks:
+## Exploration of convolutional neural networks (CNNs) in the context of image classification:
 
 1. Build and train a baseline model
 2. Build your own model to improve upon the baseline

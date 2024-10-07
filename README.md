@@ -1,5 +1,5 @@
 ## Exploration of convolutional neural networks (CNNs) in the context of image classification
-Main notebook is CS4670.ipynb where the following tasks were carried out:
+Main notebook is CNN_Class.ipynb where the following tasks were carried out:
 1. Build and train a baseline model
 2. Combat overfitting and further improve upon the baseline
 2. Generate adversarial examples to explore potential shortcomings of CNNs
